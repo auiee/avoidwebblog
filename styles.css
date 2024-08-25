@@ -1,11 +1,20 @@
 /* ベース設定 */
-body {
+html, body {
+    height: 100%;
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     color: #333;
     background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
 }
 
 /* ヘッダー設定 */
@@ -51,7 +60,4 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
