@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログタイトル</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .main-content {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .post {
+            margin-bottom: 20px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ブログタイトル</h1>
+        <nav>
+            <a href="#">ホーム</a>
+            <a href="#">カテゴリー</a>
+            <a href="#">アーカイブ</a>
+            <a href="#">お問い合わせ</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="post">
+                <h2>記事タイトル 1</h2>
+                <p>記事の概要がここに入ります。記事の内容を簡単に説明します。</p>
+                <a href="#">続きを読む</a>
+            </div>
+            <div class="post">
+                <h2>記事タイトル 2</h2>
+                <p>記事の概要がここに入ります。記事の内容を簡単に説明します。</p>
+                <a href="#">続きを読む</a>
+            </div>
+            <!-- 他の記事も追加できます -->
+        </div>
+        
+        <aside class="sidebar">
+            <h3>カテゴリー</h3>
+            <ul>
+                <li><a href="#">カテゴリー 1</a></li>
+                <li><a href="#">カテゴリー 2</a></li>
+                <li><a href="#">カテゴリー 3</a></li>
+            </ul>
+            <h3>最近のコメント</h3>
+            <ul>
+                <li><a href="#">コメント 1</a></li>
+                <li><a href="#">コメント 2</a></li>
+                <li><a href="#">コメント 3</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 ブログタイトル. All rights reserved.</p>
+    </footer>
+</body>
+</html>
