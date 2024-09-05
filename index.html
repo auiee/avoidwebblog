@@ -1,115 +1,92 @@
 <!DOCTYPE html>
-<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログタイトル</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            margin: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-        .main-content {
-            flex: 2;
-            background-color: white;
-            padding: 20px;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        .sidebar {
-            flex: 1;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        .post {
-            margin-bottom: 20px; /* 記事間のスペース */
-            padding-bottom: 20px; /* 記事下部のスペース */
-            border-bottom: 1px solid #ddd; /* 記事間の区切り線 */
-        }
-        .post h2 {
-            margin-top: 0;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <style>
+
+  .header {
+  position: absolute; /* 絶対位置で配置 */
+  left: 25%; /* 右端から25%の位置に設定 */
+  top: -8%;
+   }
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #efeef1; /* 背景色（任意） */
+}
+
+header {
+    position: relative;
+    height: 100px; /* ヘッダーの高さを指定 */
+    background-color: #f0e5d9; /* 背景色を指定（任意） */
+}
+
+.header {
+    position: absolute;
+    left: 40px; /* 左から20px */
+    top: 50%; /* 縦中央 */
+    transform: translateY(-50%); /* 縦中央に調整 */
+    margin: 0; /* デフォルトのマージンをリセット */
+    color: #544343;
+}
+.button {
+  
+    margin: 20px;
+    background-color: #fefdff; /* 背景色（任意） */
+    display: flex;
+    width: 40vw; /* 幅を指定 */
+    text-decoration: none; /* 下線を消す */
+    color: #555555;
+    align-items: left;
+    flex-direction: column; 
+    transition: background-color 0.3s ease; /* 背景色の変化をスムーズに */
+}
+
+.button:hover {
+  background-color: #bbbbbb; /* ホバー時の背景色 */
+}
+    .button img {
+  display: block; /* 画像の周りのスペースを取り除く */
+  max-width: 100%; /* ボタンのサイズに合わせる */
+  height: auto; /* アスペクト比を維持 */
+  transition: opacity 0.3s ease; /* 画像の透明度変化をスムーズに */
+}
+.button:hover img {
+  opacity: 0.5; /* ホバー時の画像の透明度 */
+}
+
+h1 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+   padding-bottom: 10px;
+} 
+h2 {
+      margin: 0 0 3px 10px ;
+}
+p  {
+  margin:0 0 10px 15px;
+   }
+img{
+    margin: 10px;
+   }    
+  </style>
 </head>
+      
 <body>
-    <header>
-        <h1>ブログタイトル</h1>
-        <nav>
-            <a href="#">ホーム</a>
-            <a href="#">カテゴリー</a>
-            <a href="#">アーカイブ</a>
-            <a href="#">お問い合わせ</a>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <div class="main-content">
-            <div class="post">
-                <h2>記事タイトル 1</h2>
-                <p>記事の概要がここに入ります。記事の内容を簡単に説明します。</p>
-                <a href="#">続きを読む</a>
-            </div>
-            <div class="post">
-                <h2>記事タイトル 2</h2>
-                <p>記事の概要がここに入ります。記事の内容を簡単に説明します。</p>
-                <a href="#">続きを読む</a>
-            </div>
-            <!-- 他の記事も追加できます -->
-        </div>
-        
-        <aside class="sidebar">
-            <h3>カテゴリー</h3>
-            <ul>
-                <li><a href="#">カテゴリー 1</a></li>
-                <li><a href="#">カテゴリー 2</a></li>
-                <li><a href="#">カテゴリー 3</a></li>
-            </ul>
-            <h3>最近のコメント</h3>
-            <ul>
-                <li><a href="#">コメント 1</a></li>
-                <li><a href="#">コメント 2</a></li>
-                <li><a href="#">コメント 3</a></li>
-            </ul>
-        </aside>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 ブログタイトル. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1 class="header">avoid web blog</h1>
+  </header>
+    <a href="https://example.com" class="button">  
+      <img src="https://cdn.glitch.global/45638ade-19f7-454d-970e-b7e1ea17a9ae/Screenshot%202024-09-05%2021.15.09.png?v=1725538525933" alt="ブログのイメージ" style="width:100%; max-width:300px;">
+
+      <h2>イーグルクラフトのサーバーの作り方</h2>
+      <p>
+      イーグルクラフトのサーバーの作り方を紹介します
+      </p>
+    </a>
+  
+  
+  
+  
+  
+  
+  
 </body>
-</html>
