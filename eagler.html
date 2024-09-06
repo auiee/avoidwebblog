@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>avoid web blog - how to play eaglecraft</title>
+    <style>
+      main {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0px;
+        padding: 30px;
+        background-color: #f9f9f9;
+        line-height: 1.8; /* 行間をフォントサイズの1.8倍に設定 */
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: relative;
+        margin: 0px;
+        height: 100px; /* ヘッダーの高さを指定 */
+        background-color: #f0e5d9; /* 背景色を指定（任意） */
+      }
+      .header {
+        position: absolute;
+        left: 40px; /* 左から40px */
+        top: 50%; /* 縦中央 */
+        transform: translateY(-50%); /* 縦中央に調整 */
+        margin: 0; /* デフォルトのマージンをリセット */
+        color: #544343;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 10px;
+      }
+      ol {
+        margin-bottom: 20px;
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 15px;
+      }
+      .code-container {
+        position: relative;
+        background: #2c3e50;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+        padding: 0 0 0 25px;
+        overflow: auto;
+        margin-top: 10px;
+        color: #ecf0f1;
+        font-size: 1em;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .code-container button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .code-container button:hover {
+        background-color: #2980b9;
+      }
+      .code-text {
+        display: block;
+        padding: 5px;
+        border-radius: 3px;
+        color: #333333;
+      }
+      .note {
+        background: #dff0d8;
+        border-left: 5px solid #4caf50;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+      .note strong {
+        color: #3c763d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/avoidwebblog" class="header-link">
+        <h1 class="header">avoid web blog</h1>
+      </a>
+    </header>
+    <main>
+      <h1>イーグルクラフトのプレイ方法</h1>
+      <ol>
+        <li>
+          
+          今回はイーグルクラフトのプレイする方法を紹介します。<br>
+          イーグルクラフトをプレイする方法は、主に2つあります<br>
+          1: HTMLファイルから開く<br>
+          2: webから情報を取得する<br>
+          この2つに大きな差はありませんが、
+          1の場合はネットに接続されていなくてもできる、フィルタリングされずらいなどの利点があります。<br>
+          2の場合はパソコンなどのデータ容量を食わない、すぐに開ける、などの利点があります。
+          
+        </li>
+        <li>
+          イーグルクラフトのURL<br>
+          <a href="https://astra-client-eagler.vercel.app/javascript/">Astra Client</a><br>
+          <a href="https://ngtanf.github.io/AstraClientEagler/javascript/">Astra Client</a><br>
+          <a href="https://eaglercraftx1-8.github.io/1.8/resent4.0/index.html">Resent Client</a><br>
+          <a href="https://ngtanf.github.io/resent-client_x1.8/1.8/resent4.0/index.html">Resent Client</a><br>
+          <a href="https://ngtanf.github.io/resent-client_x1.8/1.8/ShadowClient.html">Shadow Client</a><br>
+        
+
+        </li>
+      </ol>
+      <div class="note">
+
+      </div>
+
+      <script>
+        function copyToClipboard(text) {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          alert("コマンドがクリップボードにコピーされました！");
+        }
+      </script>
+    </main>
+  </body>
+</html>
