@@ -1,124 +1,177 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>avoid web blog - how to make eagler server</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 30px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-        ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 15px;
-        }
-        .code-container {
-            position: relative;
-            background: #2c3e50;
-            border: 1px solid #34495e;
-            border-radius: 5px;
-            padding: 0 0 0 25px;
-            overflow: auto;
-            margin-top: 10px;
-            color: #ecf0f1;
-            font-size: 1em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .code-container button {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            padding: 8px 15px;
-            border-radius: 5px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .code-container button:hover {
-            background-color: #2980b9;
-        }
-        .code-text {
-            display: block;
-            padding: 5px;
-            border-radius: 3px;
-            color: #333333;
-        }
-        .note {
-            background: #dff0d8;
-            border-left: 5px solid #4CAF50;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-        .note strong {
-            color: #3c763d;
-        }
+      main {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0px;
+        padding: 30px;
+        background-color: #f9f9f9;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: relative;
+        margin: 0px;
+        height: 100px; /* ヘッダーの高さを指定 */
+        background-color: #f0e5d9; /* 背景色を指定（任意） */
+      }
+      .header {
+        position: absolute;
+        left: 40px; /* 左から40px */
+        top: 50%; /* 縦中央 */
+        transform: translateY(-50%); /* 縦中央に調整 */
+        margin: 0; /* デフォルトのマージンをリセット */
+        color: #544343;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 10px;
+      }
+      ol {
+        margin-bottom: 20px;
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 15px;
+      }
+      .code-container {
+        position: relative;
+        background: #2c3e50;
+        border: 1px solid #34495e;
+        border-radius: 5px;
+        padding: 0 0 0 25px;
+        overflow: auto;
+        margin-top: 10px;
+        color: #ecf0f1;
+        font-size: 1em;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .code-container button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .code-container button:hover {
+        background-color: #2980b9;
+      }
+      .code-text {
+        display: block;
+        padding: 5px;
+        border-radius: 3px;
+        color: #333333;
+      }
+      .note {
+        background: #dff0d8;
+        border-left: 5px solid #4caf50;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+      .note strong {
+        color: #3c763d;
+      }
+      p {
+      }
     </style>
-</head>
-<body>
-    <h1>イーグルクラフトサーバーの作り方</h1>
-    <ol>
+  </head>
+  <body>
+    <header>
+      <a href="/avoidwebblog" class="header-link">
+        <h1 class="header">avoid web blog</h1>
+      </a>
+    </header>
+    <main>
+      <h1>イーグルクラフトサーバーの作り方</h1>
+      <ol>
         <li>
-            まず、右上の「<strong>Fork</strong>」ボタンを押し、もう一度右下の「<strong>Fork</strong>」ボタンを押してこの作品をフォークします。<br>
-            そうしたら、<code>Code</code> のボタンを押し、<code>Codespaces</code> の <strong>+</strong> ボタンを押します。<br>
-            そしてしばらく待つと <code>[プレビュー] readme.md</code> と表示されます。これが表示されたら、下に表示されているターミナルに以下のコマンドを入力しエンターキーで実行します。
-            <div class="code-container">
-                <button onclick="copyToClipboard('cd server && sudo java -jar server.jar')">コピー</button>
-                <pre><code class="command">cd server && sudo java -jar server.jar</code></pre>
-            </div>
+          <a href="https://github.com/ngtanf/eaglecraft-server">このリンク</a> にアクセスし、
+          右上の「<strong>Fork</strong>」ボタンを押し、もう一度右下の「<strong>Fork</strong>」ボタンを押してこの作品をフォークします。<br>
+          そうしたら、<code>Code</code> のボタンを押し、<code>Codespaces</code>
+          の <strong>+</strong> ボタンを押します。<br />
+          そしてしばらく待ち、
+          <code>[プレビュー] readme.md</code>
+          と表示されるまで待ちます。<br>これが表示されたら、下に表示されているターミナルに以下のコマンドを入力しエンターキーで実行します。
+          <div class="code-container">
+            <button
+              onclick="copyToClipboard('cd server && sudo java -jar server.jar')"
+            >
+              コピー
+            </button>
+            <pre><code class="command">cd server && sudo java -jar server.jar</code></pre>
+          </div>
         </li>
         <li>
-            このコマンドが打てたら、文字が出てくるのでそれが止まるまで待ち、左にあるソース管理というボタン(虫眼鏡マークの1つ下)を押し、<code>eula.txt</code> という名前のものをクリックします。<br>
-            そうすると、右の方に ~省略~ <code>eula=false</code> という文字があるので <code>false</code> の部分を <code>true</code> に書き換えます。<br>
-            そうしたら、左上にある水色の <strong>コミット</strong> という緑のチェックボタンを押します。<br>
-            そして以下のコマンドを入力し実行します。
-            <div class="code-container">
-                <button onclick="copyToClipboard('sudo java -jar server.jar')">コピー</button>
-                <pre><code class="command">sudo java -jar server.jar</code></pre>
-            </div>
+          このコマンドが打てたら、文字が出てくるのでそれが止まるまで待ち、左にあるソース管理というボタン(虫眼鏡マークの1つ下)を押し、<code>eula.txt</code>
+          という名前のものをクリックします。<br>
+          そうすると、右の方に ~省略~
+          <code>eula=false</code> という文字があるので
+          <code>false</code> の部分を <code>true</code> に書き換えます。<br>
+          そうしたら、左上にある水色の
+          <strong>コミット</strong> という緑のチェックボタンを押します。<br>
+          そして以下のコマンドを入力し実行します。
+          <div class="code-container">
+            <button onclick="copyToClipboard('sudo java -jar server.jar')">
+              コピー
+            </button>
+            <pre><code class="command">sudo java -jar server.jar</code></pre>
+          </div>
         </li>
         <li>
-            そうしたら、ターミナルの左の方にある <strong>+</strong> ボタンを押しそこで、以下のコードを入力します。
-            <div class="code-container">
-                <button onclick="copyToClipboard('cd bungee && sudo java -jar bungee.jar')">コピー</button>
-                <pre><code class="command">cd bungee && sudo java -jar bungee.jar</code></pre>
-            </div>
+          そうしたら、ターミナルの左の方にある
+          <strong>+</strong> ボタンを押しそこで、以下のコードを入力します。
+          <div class="code-container">
+            <button
+              onclick="copyToClipboard('cd bungee && sudo java -jar bungee.jar')"
+            >
+              コピー
+            </button>
+            <pre><code class="command">cd bungee && sudo java -jar bungee.jar</code></pre>
+          </div>
         </li>
         <li>
-            次に、ポート設定です。<br>
-            ターミナル の隣りにある、ポートというボタンを押します。<br>
-            青い「ポートの追加」ボタンを押し、<code>8081</code> と入力します。さらにもう一度「ポートの追加」ボタンを押し、<code>25565</code> と入力します。<br>
-            ポート <code>8081</code> の部分を押し、右側にある地球マークを押すことで開くことができます.
+          次に、ポート設定です。<br>
+          ターミナル の隣りにある、ポートというボタンを押します。<br>
+          青い「ポートの追加」ボタンを押し、<code>8081</code>
+          と入力します。さらにもう一度「ポートの追加」ボタンを押し、<code>25565</code>
+          と入力します。<br>
+          そして、<code>8081</code>の列の、<code>Private</code>というところを右クリックし、<code>ポートの表示範囲</code>をクリックし<code>Public</code>をクリックし変更します。<br>
+          次に、<code>25565</code>の列の、<code>Private</code>というところを右クリックし、<code>ポートの表示範囲</code>をクリックし<code>Public</code>をクリックし変更します。<br>
+          最後に、<code>8081</code>
+          の部分を押し、右側にある地球マークを押すことで開くことができます.
         </li>
-    </ol>
-    <div class="note">
-        これで基本的な準備は完了しました。マルチプレイ を押して、最初から入っているサーバーのアドレスを共有すれば、みんなが入ることができます。
-    </div>
+      </ol>
+      <div class="note">
+        これで基本的な準備は完了しました。multiplayer
+        を押して、最初から入っているサーバーのアドレスを共有すれば、みんなが入ることができます。
+      </div>
 
-    <script>
+      <script>
         function copyToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            alert('コマンドがクリップボードにコピーされました！');
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          alert("コマンドがクリップボードにコピーされました！");
         }
-    </script>
-</body>
+      </script>
+    </main>
+  </body>
 </html>
