@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
         line-height: 1.6;
         margin: 0px;
-        padding: 30px;
+        padding: 40px;
         background-color: #f9f9f9;
         line-height: 1.8; /* 行間をフォントサイズの1.8倍に設定 */
       }
@@ -36,9 +36,10 @@
         border-bottom: 2px solid #4caf50;
         padding-bottom: 10px;
       }
-      ol {
+      ul {
         margin-bottom: 20px;
-        padding-left: 20px;
+        padding-left: 0; /* 左の余白を削除 */
+        list-style-type: none; /* 点を非表示にする */
       }
       li {
         margin-bottom: 15px;
@@ -87,6 +88,11 @@
       .note strong {
         color: #3c763d;
       }
+      code {
+        background-color: #dddddd;
+        padding: 0 5px 0 5px;  
+        border-radius: 3px;
+      }
     </style>
   </head>
   <body>
@@ -111,26 +117,11 @@
           <a href="https://ngtanf.github.io/resent-client_x1.8/1.8/resent4.0/index.html">Resent Client</a><br>
           <a href="https://ngtanf.github.io/resent-client_x1.8/1.8/ShadowClient.html">Shadow Client</a><br>
           <a href="https://eaglercraftx1-8.github.io/">eaglecraft</a><br>
-          
-        
+      
 
         </li>
       </ol>
-      <div class="note">
 
-      </div>
-
-      <script>
-        function copyToClipboard(text) {
-          const textarea = document.createElement("textarea");
-          textarea.value = text;
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand("copy");
-          document.body.removeChild(textarea);
-          alert("コマンドがクリップボードにコピーされました！");
-        }
-      </script>
     </main>
   </body>
 </html>
